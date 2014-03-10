@@ -15,7 +15,7 @@ option_parser = OptionParser.new do |opts|
     options[:message] = v
   end
 
-  opts.on("-t", "--timeout TIMEOUT", Integer, "Timeout in seconds for process (#{PidWatcher::DEFAULT_TIMEOUT})") do |v|
+  opts.on("-t", "--timeout TIMEOUT", Integer, "Timeout in seconds for process (default: #{PidWatcher::DEFAULT_TIMEOUT})") do |v|
     options[:timeout] = v
   end
 

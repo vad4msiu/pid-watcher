@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PidWatcher::VERSION
   spec.authors       = ["vad4msiu"]
   spec.email         = ["vad4msiu@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Watcher for process}
+  spec.summary       = %q{Watcher for process}
   spec.homepage      = ""
   spec.license       = "MIT"
 
