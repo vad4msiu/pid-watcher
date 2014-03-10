@@ -1,4 +1,4 @@
-# Pid::Watcher
+# Pid Watcher
 
 This program will allow you to observe the process, and when the process is complete, you will be notified.
 
