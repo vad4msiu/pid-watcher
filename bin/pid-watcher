@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'optparse'
+require 'pid_watcher'
+
+options = {}
+
+option_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: pid-watcher PID [options]"
+
+  opts.on("-m", "--message MESSAGE", String, "Message for Notification Center (default: #{PidWatcher::DEFAULT_MESSAGE})") do |v|
+    options[:message] = v
+  end
+
+  opts.on("-t", "--timeout TIMEOUT", Integer, "Timeout in seconds for process (#{PidWatcher::DEFAULT_TIMEOUT})") do |v|
+    options[:timeout] = v
+  end
+
+  opts.on_tail("-v", "Show version") do
+    puts PidWatcher::VERSION
+    exit
+  end
+end
+
+option_parser.parse!
+
+unless ARGV.first.to_s.match(/^\d+$/)
+  puts option_parser.help
+  exit(1)
+end
+
+pid = ARGV.first.to_i
+pid_watcher = PidWatcher.new(pid, options[:message], options[:timeout])
+pid_watcher.watch
