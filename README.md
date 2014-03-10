@@ -5,6 +5,9 @@ This program will allow you to observe the process, and when the process is comp
 ## Installation
     gem install pid-watcher
 
+## Supported platform
+Only Mac OS version >= 10.8
+
 ## Usage
     $ pid-watcher -h
     Usage: pid-watcher PID [options]
