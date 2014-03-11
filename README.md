@@ -14,3 +14,6 @@ Only Mac OS version >= 10.8
       -m, --message MESSAGE            Message for Notification Center (default: Process %{pid} finished)
       -t, --timeout TIMEOUT            Timeout in seconds for process (default: 600)
       -v                               Show version
+
+## Example
+![Image](repo/blob/master/screenshot.png?raw=true)
