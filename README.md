@@ -16,4 +16,6 @@ Only Mac OS version >= 10.8
       -v                               Show version
 
 ## Example
+    $ pid-watcher 58537
+
 ![Image](screenshot.png?raw=true)
