@@ -16,4 +16,4 @@ Only Mac OS version >= 10.8
       -v                               Show version
 
 ## Example
-![Image](repo/blob/master/screenshot.png?raw=true)
+![Image](screenshot.png?raw=true)
