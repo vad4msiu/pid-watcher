@@ -19,6 +19,10 @@ option_parser = OptionParser.new do |opts|
     options[:timeout] = v
   end
 
+  opts.on("-c", "--command COMMAND", String, "Run something command after the completion ") do |v|
+    options[:command] = v
+  end
+
   opts.on_tail("-v", "Show version") do
     puts PidWatcher::VERSION
     exit
@@ -33,5 +37,5 @@ unless ARGV.first.to_s.match(/^\d+$/)
 end
 
 pid = ARGV.first.to_i
-pid_watcher = PidWatcher.new(pid, options[:message], options[:timeout])
+pid_watcher = PidWatcher.new(pid, options)
 pid_watcher.watch
